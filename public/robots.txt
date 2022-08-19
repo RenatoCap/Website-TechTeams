@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+Así que conoces Web Scraping jsjsjsjs
+
+usa esta página para practicar :3
