@@ -25,6 +25,15 @@ export default new Vuex.Store({
         },
       },
       {
+        text: 'Study Jams',
+        to: '/study-Jams',
+        icon: 'mdi-code-tags',
+        meta: {
+          showToolbar: true,
+          showBottomNav: true
+        }
+      },
+      {
         text: 'Codelab',
         to: '/codelab',
         icon: 'mdi-code-tags',
@@ -32,6 +41,15 @@ export default new Vuex.Store({
           showToolbar: true,
           showBottomNav: true
         },
+      },
+      {
+        text: 'Demos',
+        to: '/demos',
+        icon:'mdi-code-tags',
+        meta: {
+          showToolbar: true,
+          showBottomNav: true,
+        }
       },
       // {
       //   text:'Solution Challenge',
@@ -42,38 +60,6 @@ export default new Vuex.Store({
       //     showBottomNav: true,
       //   }
       // },
-      {
-        text: 'Web Dev',
-        to: '/webdev',
-        meta: {
-          showToolbar: false,
-          showBottomNav: false
-        },
-      },
-      {
-        text: 'Cloud Dev',
-        to: '/clouddev',
-        meta: {
-          showToolbar: false,
-          showBottomNav: false
-        },
-      },
-      {
-        text: 'UX/UI',
-        to: '/uxUi',
-        meta: {
-          showToolbar: false,
-          showBottomNav: false
-        },
-      },
-      {
-        text: 'DS & ML',
-        to: '/ds&ml',
-        meta: {
-          showToolbar: false,
-          showBottomNav: false
-        },
-      },
       {
         text: 'About',
         to: '/about',

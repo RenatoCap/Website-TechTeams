@@ -13,12 +13,30 @@ const routes = [{
     }
   },
   {
+    path: '/study-Jams',
+    name: 'Study Jams',
+    component: () => import( /* webpackChunkName: "StudyJam"*/ '@/views/StudyJam.vue'),
+    meta: {
+      title: 'Study Jams',
+      color: '#0277bd'
+    }
+  },
+  {
     path: '/codelab',
     name: 'Codelab',
     component: () => import( /* webpackChunkName: "codelab" */ '../views/Codelab.vue'),
     meta: {
       title: 'Codelab ',
       color: '#0277bd',
+    }
+  },
+  {
+    path: '/demos',
+    name: 'Demos',
+    component: () => import(/* webpackChunkName* "demos"*/ '@/views/Demos.vue'),
+    meta: {
+      title: 'Demos',
+      color: '#0277bd'
     }
   },
   // {
@@ -79,6 +97,16 @@ const routes = [{
       title: 'Ds&Ml',
       color: '#0277bd',
     }
+  },
+  {
+    path: '/object-detection',
+    name: "Detección de objetos",
+    component: () => import(/* webpackChunkNmame "computer vision"*/ '@/components/Demos/ObjectDetection'),
+    meta: {
+      title: 'detección de objetos',
+      color: '#0277bd'
+    }
+    
   },
   {
     path: '*',

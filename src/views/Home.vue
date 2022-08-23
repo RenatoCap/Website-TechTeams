@@ -25,7 +25,6 @@
     </v-container>
 
     <v-container fluid class="pa-0 pt-5 my-0">
-      <v-divider></v-divider>
       <v-row justify="center" align="center" style="background:#fff" class="py-0 my-0 pt-15">
         <v-col md="12" lg="10" sm="11" xs="12" class="py-0" >
           <AboutStudyJams />
@@ -58,11 +57,7 @@
         </v-col>
       </v-row>
     </v-container>
-    
- 
-
   </v-main>
-  
 </template>
 
 <script>

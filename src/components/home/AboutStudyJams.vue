@@ -1,22 +1,43 @@
 <template>
   <v-container fluid class="py-0" style="padding-left: 4%; padding-right: 4%">
   
-    <v-row align="center">
+    <v-row align="center" justify="center">
           <v-col cols="12" md="12" lg="12" sm="12" class="pa-0">
-            <div class="ma-1">
-              <div class="pa-5">
-                <p class="google-font mb-0 td-title">Study Jams</p>
-                <p class="google-font mt-0 pt-3 td-subtitle">
-                  El <b>Study Jam</b> es un programa de aprendizaje colectivo realizado dentro de cada Tech Team que combina la experiencia práctica de los developers con las experiencia de las tecnologías de Google.
-                </p>
-                <p class="google-font mt-0 td-subtitle">
-                  Las personas interesadas en aprender sobre alguna tecnología de desarrollo se unen para perfeccionar sus habilidades y ampliar sus conocimientos en estas a través de aulas interactivas y laboratorios prácticos. 
-                </p>
-              </div>
-            </div>
+            <v-container class="px-0 py-n3 mt-md-8 mb-10" fluid style="border: 1px solid rgb(224,224,224); border-radius:12px">
+              <v-row  align="center" justify="center">
+                <v-col sm="5" md="7" col="12">
+                  <p class="mb-0 title-box">Study Jams</p>
+                  <p style="font-size:18px">
+                    El <b>Study Jam</b> es un programa de aprendizaje colectivo realizado dentro de cada Tech Team que combina la experiencia práctica de los developers con las experiencia de las tecnologías de Google.
+                    <br>
+                    <br>
+                    Las personas interesadas en aprender sobre alguna tecnología de desarrollo se unen para perfeccionar sus habilidades y ampliar sus conocimientos en estas a través de aulas interactivas y laboratorios prácticos.
+                  </p>
+                  <v-btn
+                      class="ma-2"
+                      outlined
+                      rounded
+                      color="#4285F4"
+                    > 
+                      Más información
+                    </v-btn>
+                </v-col>
+                <v-col md="4" sm="4" col="12">
+                    <v-img src="@/assets/img/svg/StudyJamLogo.svg" width="150vh">
+                    </v-img>
+                </v-col>
+              </v-row>
+            </v-container>
           </v-col>
     </v-row>
 
-    <v-row class="google-font" align="center" justify="center"> </v-row>
   </v-container>
 </template>
+
+<style>
+.title-box{
+  font-family: google-sans;
+  font-size: 40px;
+  font-weight: 300;
+}
+</style>

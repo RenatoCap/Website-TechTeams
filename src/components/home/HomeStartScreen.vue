@@ -54,7 +54,7 @@
             color="#E1BEE7"
             height="54px"
         >
-          <span class="google-font text-none" style="font-size: 25px; color: black;">#UI&UX</span>
+          <span class="google-font text-none" style="font-size: 25px; color: black;">#UX/UI</span>
         </v-btn>
 
         

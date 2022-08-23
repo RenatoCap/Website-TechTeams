@@ -55,8 +55,8 @@
 
 <style>
 .summary-content{
-    background-color: rgb(249, 249, 259);
+    background-color: rgb(241, 243, 244);
     padding: 2%;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 </style>
