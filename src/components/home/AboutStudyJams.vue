@@ -18,6 +18,7 @@
                       outlined
                       rounded
                       color="#4285F4"
+                      @click="onClick($event, '/study-Jams')"
                     > 
                       Más información
                     </v-btn>
@@ -41,3 +42,17 @@
   font-weight: 300;
 }
 </style>
+
+<script>
+import router from "../../router";
+
+export default {
+  name: "AboutStudyJams",
+  methods: {
+    onClick(e, item) {
+      e.stopPropagation();
+      router.push(item);
+    },
+  }
+}
+</script>

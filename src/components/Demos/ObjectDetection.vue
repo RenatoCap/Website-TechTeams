@@ -50,10 +50,13 @@
                                         </v-btn-toggle>
                                     </div>
                                 </div>
+                                <div class="pt-5">
+                                    <span style="color:red;">* </span> Para poder visualizar la detección de objetos debes de seleccionar un modelo
+                                </div>
                             </v-col>
                             <v-col sm="12" md="6" col="12" class="text-center py-md-10 py-5" style="background: rgb(205,223,253); border-radius: 18px;">
 
-                                <div id="TensorFlowjs">
+                                <div id="TensorFlowjs" style="width: 640px; height: 450px">
                                     <div class="resultFrame" align="center" justify="center">
                                         <video ref="video" autoplay class="ml-8"></video>
                                         <canvas ref="canvas" :width="resultWidth" :height="resultHeight" class="ml-8"></canvas>
@@ -100,6 +103,7 @@ export default {
     methods: {
         play() {
             this.streamPromise = this.initWebcamStream()
+            this.loadModelAndStartDetecting()
         },
         stop() {
             this.video = this.$refs.video;
