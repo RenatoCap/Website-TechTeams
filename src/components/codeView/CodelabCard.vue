@@ -43,10 +43,11 @@
                 target="_blank"
                 style="width: 80%"
                 color="#1a73e8"
+                :href=codelab.id
               >
                 <v-icon color="#1a73e8"> mdi-code-tags </v-icon>
                 &nbsp; 
-                <a :href=codelab.id style="text-decoration: none;">
+                <a style="text-decoration: none;">
                   start 
                 </a>
               </v-btn>
@@ -88,11 +89,10 @@
 <script>
 import Colab from '../../../codelabs.json';
 
-
 export default {
   data(){
     return{
-      codelabs: Colab,
+      codelabs: Colab
     }
   },
 };

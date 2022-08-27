@@ -101,13 +101,22 @@ const routes = [{
   {
     path: '/object-detection',
     name: "Detección de objetos",
-    component: () => import(/* webpackChunkNmame "computer vision"*/ '@/components/Demos/ObjectDetection'),
+    component: () => import(/* webpackChunkName "computer vision"*/ '@/components/Demos/ObjectDetection'),
     meta: {
       title: 'detección de objetos',
       color: '#0277bd'
     }
-    
   },
+  {
+    path:'/markdown2html',
+    name: "markdown",
+    component: () => import(/* webpackChunkName "markdown2html"*/ '@/components/Demos/Markdown2html'),
+    meta: {
+      title: 'markdwon2html',
+      color: '#0277bd'
+    }
+  },
+
   {
     path: '*',
     name: 'redirect',

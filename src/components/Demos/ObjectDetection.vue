@@ -111,7 +111,7 @@ export default {
                 track.stop();
             });
         },
-        initWebcamStream(){
+        async initWebcamStream(){
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 return navigator.mediaDevices.getUserMedia({
                 audio: false, 

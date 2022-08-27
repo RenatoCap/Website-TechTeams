@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function get_JSON(){
-  const path = './src/components/codeView/Codelab';
+  const path = './public/Labs';
   var files = fs.readdirSync(path);
   let json = [];
   for (var i=0; i<files.length; i++){
