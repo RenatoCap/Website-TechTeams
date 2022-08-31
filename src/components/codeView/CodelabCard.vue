@@ -14,10 +14,10 @@
         md="3" 
         xl="3"
       >
-        <v-card class=" mt-10 codelabCard" elevation="2" max-width="500">
-          <v-img :src="codelab.src"
-            height="200px"
-          ></v-img>
+        <v-card class=" mt-10 codelabCard" elevation="2" max-width="500" min-width="350">
+          <div>
+              <v-img :src="codelab.src" height="200"></v-img>
+          </div>
           <v-card-title 
             class="mt-2"
             v-text="codelab.title" 
@@ -29,8 +29,6 @@
             <!-- {{codelab.environment}} -->
             <v-icon>mdi-clock</v-icon>  {{codelab.duration}} ' 
           </v-card-subtitle>
-          
-          <br>
           <v-card-text 
             class="text--primary pt-0"
             v-text="codelab.summary"

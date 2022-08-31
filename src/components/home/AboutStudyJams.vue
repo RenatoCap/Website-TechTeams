@@ -7,7 +7,7 @@
               <v-row  align="center" justify="center">
                 <v-col sm="5" md="7" col="12">
                   <p class="mb-0 title-box">Study Jams</p>
-                  <p style="font-size:18px">
+                  <p class="pt-3" style="font-size:18px">
                     El <b>Study Jam</b> es un programa de aprendizaje colectivo realizado dentro de cada Tech Team que combina la experiencia práctica de los developers con las experiencia de las tecnologías de Google.
                     <br>
                     <br>
