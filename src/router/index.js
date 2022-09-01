@@ -116,7 +116,15 @@ const routes = [{
       color: '#0277bd'
     }
   },
-
+  {
+    path:'/content',
+    name: "Content",
+    component: () => import('@/views/SJContent.vue'),
+    meta: {
+      title: 'content',
+      color: '#0277bd'
+    }
+  },
   {
     path: '*',
     name: 'redirect',

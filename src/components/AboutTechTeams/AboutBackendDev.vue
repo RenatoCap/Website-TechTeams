@@ -6,11 +6,11 @@
                     <p class="google-font mb-0 heading">
                         <b>
                             <span style="color: rgb(0,0,0,.87);">
-                                Web Development
+                                Backend
                             </span> 
                         </b> 
                     </p>
-                    <p class="google-font mb-0 mt-5 subheading">
+                    <p class="google-font mb-0 mt-5" style="font-size:20px">
                         Este Tech Team se enfoca en el desarrollo de cualquier tipo de aplicaciones ya sea para móviles o Web. Son bienvenidos todos los desarrolladores frontend, backend, fullstack, de android o IOS. ¿Eres nuevo? no te preocupes, aprende junto a otras personas a desarrollar el diseño de la interfaz web usando frameworks como angular o vue que facilitan tu trabajo, también aprende el cómo interactúa tu página web con el servidor y otros dispositivos electrónicos que envían información a tu página web, usando lenguajes de programación como Go.
                     </p>
                 </v-col>
@@ -26,37 +26,13 @@
                 </v-col>
             </v-row>
             <v-row align="center" class="py-0 my-0 pt-7">
-                <v-container class="my-md-15 py-15" fluid style="border-radius: 18px; background-color: rgb(255, 236, 179);">
+                <v-container fluid style="border-radius: 18px; background-color: rgb(255, 236, 179);">
                     <v-row class="my-0 pa-5 px-6" align="center" justify="center">
-                        <v-col class="border-right" sm="12" md="7" col="12">
-                            <p class="google-font mb-0 h1-heading">
-                                ¿Qué tecnologías puedo aprender 
-                                <br>
-                                en los Study Jams de este Tech Team?
+                        <v-col>
+                            <p class="google-font mb-0" align="center" justify="center" style="font-size:30px">
+                                Tecnologías de este Tech Team
                             </p>
-                        </v-col>
-                        <v-col sm="12" md="5" col="12">
-                            <v-row align="center" justify="center"> 
-                                <v-col class="text-center" sm="4" md="4" col="4">
-                                    <p class="google-font mb-0 h1-heading">
-                                        3
-                                    </p>
-                                    <p style="font-size:95%;">
-                                        De Google
-                                    </p>
-                                </v-col>
-                                <v-col class="text-center" sm="4" md="4" col="4">
-                                    <p class="google-font mb-0 h1-heading">
-                                        2+
-                                    </p>
-                                    <p style="font-size:95%;">
-                                        De otras empresas
-                                    </p>
-                                </v-col>
-                            </v-row>
-
-                        </v-col>
-                        
+                        </v-col>                
                     </v-row>
                     <v-row class="my-0 pa-5 pt-0 mt-n5 px-6 pr-0" align="end" justify="end">
                     <v-sheet
@@ -259,9 +235,6 @@
 .h1-heading{
     font-size: 36px;
     font-weight: 600;
-}
-.border-right{
-    border-right: 1px solid #d3d3d3;
 }
 .text-center{
     text-align: center !important;

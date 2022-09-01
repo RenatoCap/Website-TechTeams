@@ -3,7 +3,7 @@
         <v-container fluid class="px-0 pt-5 py-0">
             <v-row justify="center" align="center">
                 <v-col md="11" lg="10" sm="11" xs="12" class="pt-3 pb-14">
-                    <AboutWebDev/>
+                    <AboutBackendDev/>
                 </v-col>
             </v-row>
         </v-container>
@@ -13,7 +13,7 @@
 <script>
 export default {
   components: {
-    AboutWebDev: () => import("@/components/AboutTechTeams/AboutWebDev"),
+    AboutBackendDev: () => import("@/components/AboutTechTeams/AboutBackendDev"),
   },
 };
 </script>
