@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import firebase from '@/config/firebase'
 
 Vue.use(Vuex)
 
