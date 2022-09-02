@@ -243,8 +243,16 @@
 
 <script>
   export default {
+    name: 'AboutBackendDev',
     data: () => ({
       model: null,
+      studyJam: [
+        {
+            Img: "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg",
+            Title: "Introducción al desarrollo Web",
+            Duration: "22 de agosto - 2 de septiembre",
+        }
+      ]
     }),
   }
 </script>
