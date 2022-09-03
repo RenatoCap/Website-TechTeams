@@ -2,7 +2,7 @@
     <v-container>
         <v-container fluid class="py-0 my-0 mt-2 mb-5" style="padding-left: 7%; padding-right:7%">
             <v-row align="center" class="py-0 my-0 pt-2">
-                <v-col md="8" sm="12" cols="12" class="py-0 my-0">
+                <v-col md="8" sm="12" cols="12" class="py-0 my-0 pr-5">
                     <p class="google-font mb-0 heading">
                         <b>
                             <span style="color: rgb(0,0,0,.87);">
@@ -11,16 +11,18 @@
                         </b> 
                     </p>
                     <p class="google-font mb-0 mt-5" style="font-size:20px">
-                        Este Tech Team se enfoca en el desarrollo de cualquier tipo de aplicaciones ya sea para móviles o Web. Son bienvenidos todos los desarrolladores frontend, backend, fullstack, de android o IOS. ¿Eres nuevo? no te preocupes, aprende junto a otras personas a desarrollar el diseño de la interfaz web usando frameworks como angular o vue que facilitan tu trabajo, también aprende el cómo interactúa tu página web con el servidor y otros dispositivos electrónicos que envían información a tu página web, usando lenguajes de programación como Go.
+                        El backend abarca toda la lógica de una aplicación, es decir, la arquitectura interna de una aplicación que asegura que todos los elementos desarrollen su función de manera correcta. Además en esta área es la encargada de la seguridad y optimización de los recursos enfocándose en el lado del servidor que es donde viven nuestras aplicaciones para que esté disponible a todo el mundo. 
+                        <br>
+                        <br>
+                        Dentro de los Study Jams de este tech team aprenderán acerca de bases de datos, Node.js, configuración de servidores, crear sus propias APIs, optimizar la representación desde el lado del servidor, entre otros temas que llevarán sus conocimientos de desarrollo de software a otro nivel.
                     </p>
                 </v-col>
                 <v-col md="4" sm="9" cols="12" class="py-0 my-0">
                     <v-row justify="center">
                         <v-img
-                        :src="require('@/assets/gift/app-dev.gif')"
-                        :lazy-src="require('@/assets/gift/app-dev.gif')"
-                        class="mb-3"
-                        width="55%">    
+                            src='@/assets/img/TechTeams/backend.svg'
+                            class="mb-3"
+                            width="55%">    
                         </v-img>
                     </v-row>
                 </v-col>
