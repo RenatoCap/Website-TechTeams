@@ -27,12 +27,12 @@
 <script>
 import AboutTechTeamsDemos from '../components/home/AboutTechTeamsDemos.vue';
 export default {
-  name: 'Demos',
-  components: {
-    DemoHeader: () => import("@/components/Demos/DemoHeader"),
-    AboutTechTeamsDemos: () => import("@/components/home/AboutTechTeamsDemos"),
-    DemoContent: () => import("@/components/Demos/DemoContent")
-},
+    name: 'Demos',
+    components: {
+        DemoHeader: () => import("@/components/Demos/DemoHeader"),
+        AboutTechTeamsDemos: () => import("@/components/home/AboutTechTeamsDemos"),
+        DemoContent: () => import("@/components/Demos/DemoContent")
+    },
 };
 
 </script>
