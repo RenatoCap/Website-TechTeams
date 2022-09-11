@@ -42,14 +42,14 @@
                         elevation="0"
                         max-width="100%"
                     >   
-                            <v-slide-group
-                                v-model="model"
-                                class="pa-4"
-                                center-active
-                                show-arrows
-                                style="background-color: rgb(255, 236, 180);"
-                            >  
-                                <v-slide-item v-slot="{ toggle }">
+                        <v-slide-group
+                            v-model="model"
+                            class="pa-4"
+                            center-active
+                            show-arrows
+                            style="background-color: rgb(255, 236, 180);"
+                        >  
+                            <v-slide-item  v-slot="{ toggle }">
                                     <v-card
                                         class="ma-4"
                                         width="430"
@@ -57,18 +57,13 @@
                                         rounded="7"
                                         elevation="0"
                                         @click="toggle"
-                                        style="background-color: rgb(224,240,255);border-color:rgb(224,240,255);"
+                                        style="background-color: rgb(199,239,238);border-color:rgb(199,239,238);"
                                     >
                                         <v-row class="pa-3 pt-2" align="end">
                                             <v-col sm="12" md="12" col="12">
-                                                <div>
-                                                    <img src="@/assets/img/what-we-do/go.svg" width="100vh">
-                                                </div>
-                                                <p class="google-font px-2 ma-0" style="font-size:22px; font-weight: 600;">
-                                                    Golang
-                                                </p>
+                                                <img class="pl-2 pt-2" src="@/assets/img/what-we-do/nodejs.svg" width="160vh">
                                                 <p class="google-font pa-2 ft-10 ma-0">
-                                                    Golang es un lenguaje muy importante para que te inicies en el mundo de la programación :p.
+                                                    ¡Node.js es una herramienta popular para casi cualquier proyecto! Tiene la ventaja única dado que ahora los desarrolladores frontend pueden escribir código del lado del servidor con el mismo lenguaje con el que escriben desde el lado del cliente, JavaScript.
                                                 </p>
                                             </v-col>
                                         </v-row>
@@ -87,13 +82,23 @@
                                         <v-row class="pa-3 pt-2" align="end">
                                             <v-col sm="12" md="12" col="12">
                                                 <div class="ml-4">
-                                                    <img src="@/assets/img/what-we-do/firebase.svg" width="40vh">
+                                                    <v-row>
+                                                        <v-col md="4" lg="2" sm="4">
+                                                            <v-row align="center" justify="center">
+                                                                <img src="@/assets/img/what-we-do/firebase.svg" width="40vh">
+                                                            </v-row>
+                                                        </v-col>
+                                                        <v-col md="4" lg="6" sm="4">
+                                                            <v-row class="pt-2">
+                                                                <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
+                                                                    Firebase
+                                                                </p>
+                                                            </v-row>
+                                                        </v-col>
+                                                    </v-row>
                                                 </div>
-                                                <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
-                                                    Firebase
-                                                </p>
-                                                <p class="google-font pa-2 ft-10 ma-0">
-                                                    Firebase es una herramienta muy útil en el desarrollo de software
+                                                <p class="google-font pa-2 pt-5 ft-10 ma-0">
+                                                    ¡Haz que tu aplicación sea lo mejor que puede ser! Firebase es una plataforma de desarrollo de aplicaciones que le ayuda a crear y desarrollar aplicaciones y juegos que les encantan a los usuarios Repaldado por Google y en el que confían millones de empresas de todo el mundo.
                                                 </p>
                                             </v-col>
                                         </v-row>
@@ -112,13 +117,25 @@
                                         <v-row class="pa-3 pt-2" align="end">
                                             <v-col sm="12" md="12" col="12">
                                                 <div class="ml-4 pt-2">
-                                                    <img src="@/assets/img/what-we-do/angular.svg" width="45vh">
+                                                    <v-row>
+                                                        <v-col md="4" lg="2" sm="4">
+                                                            <v-row align="center" justify="center">
+                                                                <img src="@/assets/img/what-we-do/graphql.svg" width="55vh">
+                                                            </v-row>
+                                                        </v-col>
+                                                        <v-col md="4" lg="6" sm="4">
+                                                            <v-row class="pt-1">
+                                                                <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
+                                                                    GraphQL
+                                                                </p>
+                                                            </v-row>
+                                                        </v-col>
+                                                    </v-row>
+                                                    
                                                 </div>
-                                                <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
-                                                    Angular
-                                                </p>
                                                 <p class="google-font pa-2 ft-10 ma-0">
-                                                    Angular es un Framework que te permite crear aplicaciones web de una manera rápida y eficiente.
+                                                    ¡Un lenguaje de consulta para su API!
+                                                    GraphQL es un lenguaje de consulta para API y un tiempo de ejecución para cumplir con esas consultas con sus datos existente. Con esta herramienta podrá tener una descripción completa y comprensible de los datos en su API.
                                                 </p>
                                             </v-col>
                                         </v-row>
@@ -132,23 +149,71 @@
                                         rounded="7"
                                         elevation="0"
                                         @click="toggle"
-                                        style="background-color: rgb(199,239,238);border-color:rgb(199,239,238);"
+                                        style="background-color: #fcfcda; border-color:#fcfcda;"
                                     >
                                         <v-row class="pa-3 pt-2" align="end">
                                             <v-col sm="12" md="12" col="12">
-                                                <img class="pl-2 pt-2" src="@/assets/img/what-we-do/vue.svg" width="60vh">
-                                                <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
-                                                    Vue.js
-                                                </p>
+                                                <div class="ml-4 pt-2">
+                                                    <v-row>
+                                                        <v-col md="4" lg="2" sm="4">
+                                                            <v-row align="center" justify="center">
+                                                                <img src="@/assets/img/what-we-do/mongo.svg" width="55vh">
+                                                            </v-row>
+                                                        </v-col>
+                                                        <v-col md="4" lg="6" sm="4">
+                                                            <v-row class="pt-1">
+                                                                <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
+                                                                    MongoDB
+                                                                </p>
+                                                            </v-row>
+                                                        </v-col>
+                                                    </v-row>
+                                                    
+                                                </div>
                                                 <p class="google-font pa-2 ft-10 ma-0">
-                                                    Vue es una herramienta de desarrollo que te permite bla bla bla
+                                                    ¡Trabajar con datos no necesita ser duro! Lleve sus ideas al mercado más rápido con una plataforma de datos para desarrolladores basada en la base de datos moderna líder. Admita casos de uso transaccionales, de búsqueda, analíticos y móviles mientras usa una interfaz de consulta común y el modelo de datos que les encanta a los desarrolladores.
                                                 </p>
                                             </v-col>
                                         </v-row>
                                     </v-card>
                                 </v-slide-item>
+                                <!-- <v-slide-item v-slot="{ toggle }">
+                                    <v-card
+                                        class="ma-4"
+                                        width="430"
+                                        outline
+                                        rounded="7"
+                                        elevation="0"
+                                        @click="toggle"
+                                        style="background-color: rgb(224,240,255);border-color:rgb(224,240,255);"
+                                    >
+                                        <v-row class="pa-3 pt-2" align="end">
+                                            <v-col sm="12" md="12" col="12">
+                                                <div>
+                                                    <v-row>
+                                                        <v-col md="4" lg="3" sm="4">
+                                                            <v-row align="center" justify="center">
+                                                                <img src="@/assets/img/what-we-do/CloudStorage.svg" width="100vh">
+                                                            </v-row>
+                                                        </v-col>
+                                                        <v-col md="4" lg="6" sm="4">
+                                                            <v-row class="pt-4">
+                                                                <p class="google-font px-2 ma-0" style="font-size:22px; font-weight: 600;">
+                                                                    Cloud Storage
+                                                                </p>
+                                                            </v-row>
+                                                        </v-col>
+                                                    </v-row>
+                                                </div>
+                                                <p class="google-font pa-2 ft-10 ma-0">
+                                                    Golang es un lenguaje muy importante para que te inicies en el mundo de la programación :p.
+                                                </p>
+                                            </v-col>
+                                        </v-row>
+                                    </v-card>
+                                </v-slide-item> -->
                             </v-slide-group>
-                    </v-sheet>
+                        </v-sheet>
                     </v-row>
                 </v-container>
             </v-row>

@@ -27,7 +27,7 @@
             color="#FFE082"
             height="54px"
           >
-            <span class="google-font text-none" style="font-size: 25px; color: black;">#WebDev</span>
+            <span class="google-font text-none" style="font-size: 25px; color: black;">#Backend</span>
         </v-btn>
         <v-btn
             class="ma-1"
@@ -45,7 +45,7 @@
             color="#BBDEFB"
             height="54px"
         >
-          <span class="google-font text-none" style="font-size: 25px; color: black;">#DS&ML</span>
+          <span class="google-font text-none" style="font-size: 25px; color: black;">#MachineLearning</span>
         </v-btn>
         <v-btn
             class="ma-1"
@@ -54,7 +54,7 @@
             color="#E1BEE7"
             height="54px"
         >
-          <span class="google-font text-none" style="font-size: 25px; color: black;">#UX/UI</span>
+          <span class="google-font text-none" style="font-size: 25px; color: black;">#DesignDev</span>
         </v-btn>
 
         

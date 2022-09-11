@@ -63,11 +63,11 @@ const routes = [{
     }
   },
   {
-    path: '/webdev',
-    name:'Web Dev',
+    path: '/Backend',
+    name:'Backend',
     component: () => import(/* webpackChunkName: "faq" */ '../views/TechTeams/WebDev.vue'),
     meta: {
-      title: 'WebDev',
+      title: 'Backend',
       color: '#0277bd',
     }
   },
@@ -81,11 +81,11 @@ const routes = [{
     }
   },
   {
-    path: '/uxUi',
-    name:'UX/UI',
+    path: '/designdev',
+    name:'Design Dev',
     component: () => import(/* webpackChunkName: "faq" */ '../views/TechTeams/uxUi.vue'),
     meta: {
-      title: 'UxUi',
+      title: 'Design Dev',
       color: '#0277bd',
     }
   },  
