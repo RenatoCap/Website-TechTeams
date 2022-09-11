@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="py-0 my-0 mt-2 mb-5" style="padding-left: 7%; padding-right:7%">
+    <v-container fluid class="py-0 my-0 mt-2 mb-0" style="padding-left: 7%; padding-right:7%">
         <v-row align="center" class="py-0 my-0">
             <v-col md="8" sm="12" cols="12" class="py-0 my-0">
                 <p class="google-font mb-0 heading"><b>
@@ -8,6 +8,42 @@
                 <p class="google-font mb-0 mt-5 td-subtitle">
                     Las tecnologías de desarrollo son herramientas que facilitan el trabajo que realices independiente de la carrera en la que te encuentres, por ello dentro de nuestros Study Jams enseñaremos como aplicarlas en distintos casos y mostrarlos a la comunidad a través de esta pestaña :D
                 </p>
+                <v-btn
+                    class="ma-1"
+                    elevation="0"
+                    rounded
+                    color="#FFE082"
+                    height="54px"
+                >
+                    <span class="google-font text-none" style="font-size: 25px; color: black;">#WebDev</span>
+                </v-btn>
+                <v-btn
+                    class="ma-1"
+                    elevation="0"
+                    rounded
+                    color="#FFCDD2"
+                    height="54px"
+                >
+                <span class="google-font text-none" style="font-size: 25px; color: black;">#CloudDev</span>
+                </v-btn>
+                <v-btn
+                    class="ma-1"
+                    elevation="0"
+                    rounded
+                    color="#BBDEFB"
+                    height="54px"
+                >
+                <span class="google-font text-none" style="font-size: 25px; color: black;">#DS&ML</span>
+                </v-btn>
+                <v-btn
+                    class="ma-1"
+                    elevation="0"
+                    rounded
+                    color="#E1BEE7"
+                    height="54px"
+                >
+                <span class="google-font text-none" style="font-size: 25px; color: black;">#DesignDev</span>
+                </v-btn>
             </v-col>
             <v-col md="4" sm="12" cols="12" class="py-0 my-0 mt-10">
                 <v-img
