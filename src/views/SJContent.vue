@@ -6,7 +6,7 @@
                     <v-container class="my-0 ma-0 pa-0 mt-0" fluid style="border-bottom: 1px solid rgb(224, 224, 224); background: rgb(249, 250, 251) none repeat scroll 0% 0%;">
                         <v-row  class="mt-0 pt-15 pb-15" align="center" justify="center">
                             <v-col class="order-2 order-md-1 mb-3 pr-md-10" cols="12" md="7" lg="6" xl="6">
-                                <p class="google-font event-title"> {{ sj.title }}</p>
+                                <p class="google-font event-title"> {{ sj.Title }}</p>
                                 <div class="google-font" style="font-size:1.1em">
                                     <p>
                                         <strong style="color: rgb(67, 67, 67);">
@@ -33,6 +33,7 @@
                                         height="2.5em"
                                         class="google-font"
                                         style="background-color: rgb(255, 0, 0); border-color: rgb(255, 0, 0); text-transform: capitalize; font-size: 105%;"
+                                        v-if="!sj.Extended"
                                     >
                                         <v-icon class="pr-2">
                                             mdi-youtube
@@ -42,8 +43,8 @@
                                 </div>
                             </v-col>
 
-                            <v-col cols="12" md="4" lg="4" xl="3" class="pa-md-3 float-md-right order-1 order-md-2">
-                                <v-img class="mt-0 mt-md-0" style="border: 1px solid rgb(224, 224, 224); border-radius: 8px; min-height: 300px;" :src=sj.img  width="100vh" height="40vh">
+                            <v-col cols="12" md="5" lg="5" xl="3" class="float-md-right order-1 order-md-2">
+                                <v-img class="mt-0 mt-md-0" style="border: 1px solid rgb(224, 224, 224); border-radius: 8px; min-height: 300px;" :src=sj.img  width="120vh" height="50vh">
                                 </v-img>
                             </v-col>
                         </v-row>
@@ -99,7 +100,7 @@
                                                                     <p class="google-font mb-0 mt-5">
                                                                         {{sj.SJL}}
                                                                         <br>
-                                                                        <span style="font-size:60%;">Vicepresidente</span>
+                                                                        <span style="font-size:60%;">{{ sj.SJLOcupation }}</span>
                                                                     </p>
                                                                 </v-list-item-title>
                                                                 <v-list-item-subtitle>
@@ -109,7 +110,7 @@
                                                                                 <v-btn
                                                                                     icon
                                                                                     class="ml-0 mt-0 mx-0"
-                                                                                    :href=sj.SocialNetwor.linkedin
+                                                                                    :href=sj.SocialNetwork.github
                                                                                 >
                                                                                     <v-icon style="color: rgb(0, 119, 181); caret-color: rgb(0, 119, 181);">
                                                                                         mdi-linkedin
@@ -118,7 +119,7 @@
                                                                                 <v-btn
                                                                                     icon
                                                                                     class="ml-0 mt-0 mx-0"
-                                                                                    :href=sj.SocialNetwor.github
+                                                                                    :href=sj.SocialNetwork.github
                                                                                 >
                                                                                     <v-icon style="color:#000; caret-color: #000;">
                                                                                         mdi-github
@@ -134,7 +135,7 @@
                                                                 color="grey"
                                                                 style="height: 105px; min-width: 105px; width: 105px;"
                                                             >
-                                                                <v-img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/events/papi%20gengis.jpeg"></v-img>
+                                                                <v-img :src=sj.PhotoSJL></v-img>
                                                             </v-list-item-avatar>
                                                         </v-list-item>
                                                         </v-card>
@@ -182,6 +183,11 @@
 </style>
 
 <script>
+import router from "@/router";
+import { config } from '@/config/config.js';
+import { initializeApp } from 'firebase/app';
+import {  getFirestore, collection, onSnapshot,doc } from 'firebase/firestore'
+
 export default {
     'name': 'SjContent',
     data() {
@@ -190,51 +196,19 @@ export default {
                 {text: "Día", value:"dia"},
                 {text: "Contenido", value:"content"}
             ],
-            sj: {
-                img: "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg",
-                title: "Introducción al Desarrollo Web",
-                summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                SJL: "Gengis Gutierrez",
-                SocialNetwor: {
-                    linkedin: "#",
-                    github: "#"
-                },
-                PhotoSJL: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/events/photo_2022-01-23_15-27-48.jpg",
-                Agenda: [
-                    {
-                        dia: "Día 1",
-                        content: "Fundamentos de desarrollo web e Introducción a HTML"
-                    },
-                    {
-                        dia: "Día 2",
-                        content: "HTML laboratorio pŕactico"
-                    },
-                    {
-                        dia: "Día 3",
-                        content: "Introducción a CSS"
-                    },
-                    {
-                        dia: "Día 4",
-                        content: "CSS Laboratorio"
-                    },
-                    {
-                        dia: "Día 5",
-                        content: "Introducción a JavaScript"
-                    },
-                    {
-                        dia: "Día 6",
-                        content: "JS Laboratorio"
-                    },
-                    {
-                        dia: "Día 7",
-                        content: "Mini proyecto"
-                    }
-                ],
-                Prerequisitos: ["Conocimiento básico en programación", "Tener Visual Studio Code instalado :p"],
-                LastDay:  "22th July 2021 | 05:00 PM",
-                Duration:"July 25, 2021 to July 31, 2021 | 07:00 PM - 08:00 PM (GMT-5)"
-            }
+            prueba: null,
+            sj: {}
         }
+    },
+    mounted() {
+        const firebaseApp = initializeApp(config.firebase);
+        const firestore = getFirestore(firebaseApp);
+        const studyJam = collection(firestore, 'StudyJams');
+        const document = doc(studyJam, this.$route.params.id);
+        onSnapshot(document, snapshot => {
+            const data = snapshot.data();
+            this.sj = data;
+        });
     }
 }
 </script>

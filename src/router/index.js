@@ -126,6 +126,10 @@ const routes = [{
     }
   },
   {
+    path:'/study-jam/:id',
+    component: () => import('@/views/SJContent.vue'),
+  },
+  {
     path: '*',
     name: 'redirect',
     redirect: {

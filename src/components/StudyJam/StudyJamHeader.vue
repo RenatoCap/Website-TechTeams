@@ -24,51 +24,61 @@
                         Los Study Jam Extended estan diseñados para todos aquellos estudiantes que recien se inician en el mundo de las tecnologías de desarrollo. Durante estos Study Jams se enseñaran los conocimientos básicos y fundamentales para que posteriormente puedas formar parte de un Study Jam de alguno de nuestros Tech Teams.
                     </p>
                     <v-container class="my-0 py-0 pb-md-15" fluid>
-            <v-row class="my-0 py-0" align="start" justify="start">
-                <v-col
-                    v-for="n in 10"
-                    :key="n"
-                    class="py-0 my-0" 
-                    sm="6"
-                    md="3"
-                    xl="3"
-                    col="12"
-                >
-                    <v-card 
-                        class="mt-10" 
-                        style="border-radius: 1px solid rgb(224,224,224); border-radius: 10px;" 
-                        elevation="2" 
-                        max-width="500"
-                    >   
-                        <v-img
-                                height="200px"
-                                src="https://www.svgrepo.com/show/354444/terraform.svg"
+                        <v-row class="my-0 py-0" align="start" justify="start">
+                            <v-col
+                                v-for="(sj,i) in SJ"
+                                :key="i"
+                                class="py-0 my-0" 
+                                sm="6"
+                                md="3"
+                                xl="3"
+                                col="12"
                             >
-                        </v-img>
-                        <div class="text-center pb-5" style="border-top: 1px solid rgb(224,224,224);">
-                            <p class="google-font mt-3 mb-0 pt-2" style="font-size: 1.5em;" >
-                                Introducción a Terraform  
-                            </p>
-                            <p class="google-font mb-0">
-                                22 de agosto - 2 de septiembre
-                            </p>
-                            <div class="pt-5">
-                                <v-chip
-                                class="ma-2"
-                                color="green"
-                                text-color="white"
-                                >
-                                    Inscripciones abiertas
-                                </v-chip>
-                            </div>
-                            <v-btn class="pt-2" text color="#00000DE" href="#">
-                                Ver más información
-                            </v-btn>
-                        </div>
-                    </v-card>
-                </v-col>
-            </v-row>
-        </v-container>  
+                                <v-card 
+                                    class="mt-10" 
+                                    style="border-radius: 1px solid rgb(224,224,224); border-radius: 10px;" 
+                                    elevation="2" 
+                                    max-width="500"
+                                >   
+                                    <v-img
+                                            height="200px"
+                                            :src="sj.img"
+                                        >
+                                    </v-img>
+                                    <div class="text-center pb-5" style="border-top: 1px solid rgb(224,224,224);">
+                                        <p class="google-font mt-3 mb-0 pt-2" style="font-size: 1.5em;" >
+                                            {{sj.Title}}
+                                        </p>
+                                        <p class="google-font mb-0">
+                                            {{sj.Duration}}
+                                        </p>
+                                        <div class="pt-5" v-if="sj.open">
+                                            <v-chip
+                                            class="ma-2"
+                                            color="green"
+                                            text-color="white"
+                                            >
+                                                Inscripciones abiertas
+                                            </v-chip>
+                                        </div>
+                                        <div class="pt-5" v-else>
+                                            <v-btn
+                                                class="ma-2"
+                                                outlined
+                                                color="blue"
+                                            >
+                                                <v-icon light class="pr-2">mdi-play</v-icon>
+                                                Grabaciones
+                                            </v-btn>
+                                        </div>
+                                        <v-btn class="pt-2" text color="#00000DE" @click="onClick($event, sj.id)">
+                                            Ver más información
+                                        </v-btn>
+                                    </div>
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-container>  
                 </div>
             </v-col>
         </v-row>
@@ -76,22 +86,48 @@
     
 </template>
 
-<style>
-.content-title {
-    font-size:38px;
-    font-weight: bold;
-}
-.content-subtitle {
-    font-size: 20px;
-}
-</style>
-
 <script>
-    export default {
-      data () {
+import router from "../../router";
+import { config } from '@/config/config.js';
+import { initializeApp } from 'firebase/app';
+import {  getFirestore, collection, onSnapshot } from 'firebase/firestore'
+
+
+export default {
+    data () {
         return {
-          e1: 1,
+            e1: 1,
+            SJ: [],
         }
-      },
+    },
+    mounted(){
+        const firebaseApp = initializeApp(config.firebase);
+        const firestore = getFirestore(firebaseApp);
+        const userCol = collection(firestore, 'StudyJams');
+        onSnapshot(userCol, snapshot => {
+            snapshot.docs.map(d => {
+                const data = {id: d.id,  ...d.data()} ;
+                this.SJ.push(data);
+            })
+        });
+    },
+    methods: {
+        onClick(e, item) {
+            e.stopPropagation();
+            router.push(`/study-jam/${item}`);
+        },
     }
-  </script>
+}
+</script>
+
+
+<style>
+    .content-title {
+        font-size:38px;
+        font-weight: bold;
+    }
+    .content-subtitle {
+        font-size: 20px;
+    }
+    </style>
+    

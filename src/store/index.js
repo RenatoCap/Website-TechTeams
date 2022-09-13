@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     drawer: false,
+    id: '',
     eventDrawer:true,
     config: {
       generalConfig: {
@@ -83,10 +84,11 @@ export default new Vuex.Store({
   getters: {
     links: (state) => {
       return state.items
-    }
+    },
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
+    setId: (state, newId) => (state.id = newId),
     toggleDrawer: state => (state.drawer = !state.drawer),
     setEventDrawer: (state, payload) => (state.eventDrawer = payload),
     toggleEventDrawer: state => (state.eventDrawer = !state.eventDrawer),

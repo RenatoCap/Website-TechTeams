@@ -265,9 +265,9 @@
                                     outlined
                                     color="blue"
                                 >
-                                <v-icon light class="pr-2">mdi-play</v-icon>
-                                Grabaciones
-                            </v-btn>
+                                    <v-icon light class="pr-2">mdi-play</v-icon>
+                                    Grabaciones
+                                </v-btn>
                             </div>
                             <v-btn class="pt-2" text color="#00000DE" href="#">
                                 Ver más información

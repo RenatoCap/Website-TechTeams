@@ -46,6 +46,8 @@
 <script>
 import router from "../../router";
 
+console.log(this.$router);
+
 export default {
   name: "AboutStudyJams",
   methods: {
