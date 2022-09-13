@@ -85,6 +85,9 @@ export default new Vuex.Store({
     links: (state) => {
       return state.items
     },
+    id: (state) => {
+      return state.id
+    }
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
