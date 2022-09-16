@@ -3,7 +3,7 @@
         <v-row align="center" class="py-0 my-0">
             <v-col md="8" sm="12" cols="12" class="py-0 my-0">
                 <div class="container ma-5 pt-5">
-                    <img src="@/assets/img/SJ/studyJam.svg" width="400vh">
+                    <img  class="image-container" src="@/assets/img/SJ/studyJam.svg">
                     <p class="google-font mb-0 mt-5 content-subtitle mr-5">
                         Study Jam es un programa de aprendizaje colectivo que combina la experiencia práctica de los desarrolladores con la experiencia de Google Cloud. Todos los estudiantes con ideas afines se unen para perfeccionar sus habilidades y ampliar sus conocimientos sobre alguna de las tecnologías de desarrollo a través de aulas interactivas y laboratorios prácticos.
                         <br>
@@ -13,7 +13,7 @@
                 </div>
             </v-col>
             <v-col md="4" sm="12" cols="12" class="py-0 my-0 mt-10">
-                <v-img src="@/assets/img/SJ/iconJam.svg" width="80vh"/>
+                <v-img class="study-jam-picture" src="@/assets/img/SJ/iconJam.svg" />
             </v-col>
         </v-row>
         <v-row align="center" class="py-0 my-0 mt-10">
@@ -37,8 +37,7 @@
                                 <v-card 
                                     class="mt-10" 
                                     style="border-radius: 1px solid rgb(224,224,224); border-radius: 10px;" 
-                                    elevation="2" 
-                                    max-width="500"
+                                    elevation="2"
                                 >   
                                     <v-img
                                             height="200px"
@@ -46,34 +45,36 @@
                                         >
                                     </v-img>
                                     <div class="text-center pb-5" style="border-top: 1px solid rgb(224,224,224);">
-                                        <p class="google-font mt-3 mb-0 pt-2" style="font-size: 1.5em;" >
-                                            {{sj.Title}}
-                                        </p>
-                                        <p class="google-font mb-0">
-                                            {{sj.Duration}}
-                                        </p>
-                                        <div class="pt-5" v-if="sj.open">
-                                            <v-chip
-                                            class="ma-2"
-                                            color="green"
-                                            text-color="white"
-                                            >
-                                                Inscripciones abiertas
-                                            </v-chip>
-                                        </div>
-                                        <div class="pt-5" v-else>
-                                            <v-btn
+                                        <v-container>
+                                            <p class="google-font mt-3 mb-0 pt-2 title-card" style="font-size: 1.5em;" >
+                                                {{sj.Title}}
+                                            </p>
+                                            <p class="google-font mb-0">
+                                                {{sj.Duration}}
+                                            </p>
+                                            <div class="pt-5" v-if="sj.open">
+                                                <v-chip
                                                 class="ma-2"
-                                                outlined
-                                                color="blue"
-                                            >
-                                                <v-icon light class="pr-2">mdi-play</v-icon>
-                                                Grabaciones
+                                                color="green"
+                                                text-color="white"
+                                                >
+                                                    Inscripciones abiertas
+                                                </v-chip>
+                                            </div>
+                                            <div class="pt-5" v-else>
+                                                <v-btn
+                                                    class="ma-2"
+                                                    outlined
+                                                    color="blue"
+                                                >
+                                                    <v-icon light class="pr-2">mdi-play</v-icon>
+                                                    Grabaciones
+                                                </v-btn>
+                                            </div>
+                                            <v-btn class="pt-2" text color="#00000DE" @click="onClick($event, sj.id)">
+                                                Ver más información
                                             </v-btn>
-                                        </div>
-                                        <v-btn class="pt-2" text color="#00000DE" @click="onClick($event, sj.id)">
-                                            Ver más información
-                                        </v-btn>
+                                        </v-container>
                                     </div>
                                 </v-card>
                             </v-col>
@@ -103,7 +104,7 @@ export default {
     mounted(){
         const firebaseApp = initializeApp(config.firebase);
         const firestore = getFirestore(firebaseApp);
-        const userCol = collection(firestore, 'StudyJams');
+        const userCol = collection(firestore, 'StudyJamExtended');
         onSnapshot(userCol, snapshot => {
             snapshot.docs.map(d => {
                 const data = {id: d.id,  ...d.data()} ;
@@ -114,7 +115,7 @@ export default {
     methods: {
         onClick(e, item) {
             e.stopPropagation();
-            router.push(`/study-jam/${item}`);
+            router.push(`/study-jam-extended/${item}`);
         },
     }
 }
@@ -122,12 +123,33 @@ export default {
 
 
 <style>
+.content-title {
+    font-size:38px;
+    font-weight: bold;
+}
+.content-subtitle {
+    font-size: 20px;
+}
+.image-container{
+    width:50vh;
+}
+.study-jam-picture {
+    width: 45vh;
+}
+@media (max-width: 767.98px) {
     .content-title {
-        font-size:38px;
+        font-size:28px;
         font-weight: bold;
     }
     .content-subtitle {
-        font-size: 20px;
+        font-size: 18px;
     }
-    </style>
+    .image-container{
+        width:34vh;
+    }
+    .study-jam-picture {
+        width: 40vh;
+    }
+}
+</style>
     

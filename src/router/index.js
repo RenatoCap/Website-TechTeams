@@ -116,18 +116,34 @@ const routes = [{
       color: '#0277bd'
     }
   },
+  // {
+  //   path:'/content',
+  //   name: "Content",
+  //   component: () => import( /* webpackChunkName: "SJContent" */ '@/views/SJContent.vue'),
+  //   meta: {
+  //     title: 'content',
+  //     color: '#0277bd'
+  //   }
+  // },
   {
-    path:'/content',
-    name: "Content",
-    component: () => import('@/views/SJContent.vue'),
-    meta: {
-      title: 'content',
-      color: '#0277bd'
-    }
+    path:'/study-jam-extended/:id',
+    component: () => import(/* webpackChunkName: "SJEContent" */  '@/views/SJEContent.vue'),
   },
   {
-    path:'/study-jam/:id',
-    component: () => import('@/views/SJContent.vue'),
+    path:'/study-jam/Backend/:id',
+    component: () => import(/* webpackChunkName: "SJContent" */  '@/views/SJContent.vue'),
+  },
+  {
+    path:'/study-jam/DesignDev/:id',
+    component: () => import(/* webpackChunkName: "SJContent" */  '@/views/SJContent.vue'),
+  },
+  {
+    path:'/study-jam/DesignDev/:id',
+    component: () => import(/* webpackChunkName: "SJContent" */  '@/views/SJContent.vue'),
+  },
+  {
+    path:'/study-jam/MachineLearning/:id',
+    component: () => import(/* webpackChunkName: "SJContent" */  '@/views/SJContent.vue'),
   },
   {
     path: '*',

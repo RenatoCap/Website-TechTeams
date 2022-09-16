@@ -230,22 +230,12 @@ export default {
     mounted() {
         const firebaseApp = initializeApp(config.firebase);
         const firestore = getFirestore(firebaseApp);
-        const userCol = collection(firestore, 'StudyJams');
-        const fullPath = this.$route.fullPath;
-        const userDoc = doc(userCol, fullPath.split('/')[2]);
-        const newUserCol = collection(userDoc, '202201/');
-        const document = doc(newUserCol, this.$route.params.id);
+        const studyJam = collection(firestore, 'StudyJamExtended');
+        const document = doc(studyJam, this.$route.params.id);
         onSnapshot(document, snapshot => {
             const data = snapshot.data();
             this.sj = data;
-            console.log(data);
         });
-        // const document = doc(studyJam, this.$route.params.id);
-        // onSnapshot(document, snapshot => {
-        //     const data = snapshot.data();
-        //     this.sj = data;
-        
-        // });
     }
 }
 </script>

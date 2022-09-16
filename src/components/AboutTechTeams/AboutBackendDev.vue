@@ -177,41 +177,6 @@
                                         </v-row>
                                     </v-card>
                                 </v-slide-item>
-                                <!-- <v-slide-item v-slot="{ toggle }">
-                                    <v-card
-                                        class="ma-4"
-                                        width="430"
-                                        outline
-                                        rounded="7"
-                                        elevation="0"
-                                        @click="toggle"
-                                        style="background-color: rgb(224,240,255);border-color:rgb(224,240,255);"
-                                    >
-                                        <v-row class="pa-3 pt-2" align="end">
-                                            <v-col sm="12" md="12" col="12">
-                                                <div>
-                                                    <v-row>
-                                                        <v-col md="4" lg="3" sm="4">
-                                                            <v-row align="center" justify="center">
-                                                                <img src="@/assets/img/what-we-do/CloudStorage.svg" width="100vh">
-                                                            </v-row>
-                                                        </v-col>
-                                                        <v-col md="4" lg="6" sm="4">
-                                                            <v-row class="pt-4">
-                                                                <p class="google-font px-2 ma-0" style="font-size:22px; font-weight: 600;">
-                                                                    Cloud Storage
-                                                                </p>
-                                                            </v-row>
-                                                        </v-col>
-                                                    </v-row>
-                                                </div>
-                                                <p class="google-font pa-2 ft-10 ma-0">
-                                                    Golang es un lenguaje muy importante para que te inicies en el mundo de la programación :p.
-                                                </p>
-                                            </v-col>
-                                        </v-row>
-                                    </v-card>
-                                </v-slide-item> -->
                             </v-slide-group>
                         </v-sheet>
                     </v-row>
@@ -233,8 +198,8 @@
         <v-container class="my-0 py-0 pb-md-15" fluid>
             <v-row class="my-0 py-0" align="start" justify="start">
                 <v-col
-                    v-for="n in 20"
-                    :key="n"
+                    v-for="(sj,i) in SJ"
+                    :key="i"
                     class="py-0 my-0" 
                     sm="6"
                     md="3"
@@ -244,34 +209,44 @@
                     <v-card 
                         class="mt-10" 
                         style="border-radius: 1px solid rgb(224,224,224); border-radius: 10px;" 
-                        elevation="2" 
-                        max-width="500"
+                        elevation="2"
                     >   
                         <v-img
                                 height="200px"
-                                src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg"
+                                :src="sj.img"
                             >
                         </v-img>
                         <div class="text-center pb-5" style="border-top: 1px solid rgb(224,224,224);">
-                            <p class="google-font mt-3 mb-0 pt-2" style="font-size: 1.5em;" >
-                                Introducción al desarrollo Web  
-                            </p>
-                            <p class="google-font mb-0">
-                                22 de agosto - 2 de septiembre
-                            </p>
-                            <div class="pt-5">
-                                 <v-btn
+                            <v-container>
+                                <p class="google-font mt-3 mb-0 pt-2 title-card" style="font-size: 1.5em;" >
+                                    {{sj.Title}}
+                                </p>
+                                <p class="google-font mb-0">
+                                    {{sj.Duration}}
+                                </p>
+                                <div class="pt-5" v-if="sj.open">
+                                    <v-chip
                                     class="ma-2"
-                                    outlined
-                                    color="blue"
-                                >
-                                    <v-icon light class="pr-2">mdi-play</v-icon>
-                                    Grabaciones
+                                    color="green"
+                                    text-color="white"
+                                    >
+                                        Inscripciones abiertas
+                                    </v-chip>
+                                </div>
+                                <div class="pt-5" v-else>
+                                    <v-btn
+                                        class="ma-2"
+                                        outlined
+                                        color="blue"
+                                    >
+                                        <v-icon light class="pr-2">mdi-play</v-icon>
+                                        Grabaciones
+                                    </v-btn>
+                                </div>
+                                <v-btn class="pt-2" text color="#00000DE" @click="onClick($event, sj.id)">
+                                    Ver más información
                                 </v-btn>
-                            </div>
-                            <v-btn class="pt-2" text color="#00000DE" href="#">
-                                Ver más información
-                            </v-btn>
+                            </v-container>
                         </div>
                     </v-card>
                 </v-col>
@@ -309,17 +284,35 @@
 </style>
 
 <script>
-  export default {
+import router from "../../router";
+import { config } from '@/config/config.js';
+import { initializeApp } from 'firebase/app';
+import {  getFirestore, collection, onSnapshot, doc } from 'firebase/firestore'
+
+export default {
     name: 'AboutBackendDev',
     data: () => ({
-      model: null,
-      studyJam: [
-        {
-            Img: "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg",
-            Title: "Introducción al desarrollo Web",
-            Duration: "22 de agosto - 2 de septiembre",
-        }
-      ]
+        model: null,
+        SJ: [],
     }),
-  }
+    mounted(){
+            const firebaseApp = initializeApp(config.firebase);
+            const firestore = getFirestore(firebaseApp);
+            const userCol = collection(firestore, 'StudyJams/');
+            const userDoc = doc(userCol, 'Backend/');
+            const newUserCol = collection(userDoc, '202201/')
+            onSnapshot(newUserCol, snapshot => {
+                snapshot.docs.map(d => {
+                    const data = {id: d.id,  ...d.data()} ;
+                    this.SJ.push(data);
+                })
+            });
+        },
+    methods: {
+        onClick(e, item) {
+            e.stopPropagation();
+            router.push(`/study-jam/Backend/${item}`);
+        },
+    }
+}
 </script>

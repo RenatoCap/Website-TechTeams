@@ -27,7 +27,7 @@ export default new Vuex.Store({
       {
         text: 'Study Jams',
         to: '/study-Jams',
-        icon: 'mdi-code-tags',
+        icon: 'mdi-account-plus',
         meta: {
           showToolbar: true,
           showBottomNav: true
@@ -42,15 +42,15 @@ export default new Vuex.Store({
           showBottomNav: true
         },
       },
-      {
-        text: 'Demos',
-        to: '/demos',
-        icon:'mdi-code-tags',
-        meta: {
-          showToolbar: true,
-          showBottomNav: true,
-        }
-      },
+      // {
+      //   text: 'Demos',
+      //   to: '/demos',
+      //   icon:'mdi-vector-arrange-above',
+      //   meta: {
+      //     showToolbar: true,
+      //     showBottomNav: true,
+      //   }
+      // },
       // {
       //   text:'Solution Challenge',
       //   to: '/Solution-Challenge',

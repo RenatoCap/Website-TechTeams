@@ -78,27 +78,6 @@ export default {
 </script>
 
 <style>
-mark {
-  position: relative;
-  z-index: 0;
-  padding: 0 0 10px;
-  background-color: #fefefe;
-
-}
-mark:after{
-  content: "";
-  position: absolute;
-  width: 170px;
-  height: 22px;
-  top: 85%;
-  bottom: 0;
-  left: 0%;
-  z-index: 1;
-  transform: translate(-45px);
-  background-color: #F44336;
-  mask-image: url('../../assets/img/svg/marker.svg');
-}
-
 .card {
   border-radius: 15px;
   padding: 2%;
