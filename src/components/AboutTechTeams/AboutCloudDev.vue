@@ -28,7 +28,7 @@
                 </v-col>
             </v-row>
             <v-row align="center" class="py-0 my-0 pt-7">
-                <v-container fluid style="border-radius: 18px; background-color: #E1BEE7;">
+                <v-container fluid style="border-radius: 18px; background-color: #FFCDD2;">
                     <v-row class="my-0 pa-5 px-6" align="center" justify="center">
                         <v-col>
                             <p class="google-font mb-0" align="center" justify="center" style="font-size:30px">
@@ -47,7 +47,7 @@
                                 class="pa-4"
                                 center-active
                                 show-arrows
-                                style="background-color: #E1BEE7;"
+                                style="background-color: #FFCDD2;"
                             >  
                                 <v-slide-item v-slot="{ toggle }">
                                     <v-card
