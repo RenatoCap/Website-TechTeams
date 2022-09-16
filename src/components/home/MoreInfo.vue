@@ -7,7 +7,7 @@
           class="google-font mt-0 pt-3"
           style="font-size:115%"
         >
-            Dentro de nuestros Tech Teams podrán aprender y compartir sus conocimientos junto con otras personas que comparten sus gustos, liderados por un Lead que los guiará en este viaje que estan por empezar.
+            Dentro de nuestros Tech Teams podrán aprender y compartir sus conocimientos junto con otras personas que comparten sus gustos, liderados por un Lead que los guiará en este viaje que está por empezar. 
         </p>
       </v-col>
       <v-col cols="12" md="9" lg="9" sm="8">
@@ -43,7 +43,7 @@
               <p
                 class="google-font"
                 style="font-size:95%"
-              > Aprende acerca de temas especificos que te servirán para la realización de proyectos en nuestros Study Jams </p>
+              > Aprende acerca de temas específicos que te servirán para la realización de proyectos en nuestros Study Jams</p>
             </v-col>
           </v-row>
         </v-container>

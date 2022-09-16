@@ -25,7 +25,7 @@
                     </v-row>
                 </v-col>
             </v-row>
-            <v-row align="center" class="py-0 my-0 pt-7">
+            <v-row align="center" class="py-0 my-0 pt-7 d-none d-sm-block">
                 <v-container fluid style="border-radius: 18px; background-color: #E1BEE7;">
                     <v-row class="my-0 pa-5 px-6" align="center" justify="center">
                         <v-col>
@@ -249,6 +249,172 @@
                     </v-row>
                 </v-container>
             </v-row>
+            
+            <v-row class="mobile-view ma-0 pa-0 hidden-sm-and-up" align="center" justify="center">
+                <v-row class="my-0 pa-5 px-6" align="center" justify="center">
+                    <v-col>
+                        <p class="google-font mb-0" align="center" justify="center" style="font-size:25px">
+                            Tecnologías de este Tech Team
+                        </p>
+                    </v-col>                
+                </v-row>
+                <v-row class="my-0 pa-5 pt-0 mt-n5 px-6 pr-0" align="end" justify="end">
+                    <!-- <v-system-bar lights-out></v-system-bar> -->
+                    <v-carousel
+                    :continuous="false"
+                    :cycle="cycle"
+                    :show-arrows="false"
+                    hide-delimiter-background
+                    delimiter-color="rgb(26, 115, 232)"
+                    delimiter-icon="mdi-minus"
+                    progress-color="rgb(26, 115, 232)"
+                    height="300"
+                    >
+                        <v-carousel-item
+                        >
+                            <v-sheet
+                                color="rgb(224,240,255)"
+                                height="100%"
+                                tile
+                            >
+                                <v-row
+                                    class="fill-height"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <img src="@/assets/img/what-we-do/css.svg" width="70vh">
+                                    <p class="google-font pt-5 pl-4" style="font-size:28px; font-weight: 600; color: grey;">
+                                        CSS
+                                    </p>
+                                </v-row>
+                            </v-sheet>
+                        </v-carousel-item>
+                        <v-carousel-item
+                        >
+                            <v-sheet
+                                color="#f6d1de"
+                                height="100%"
+                                tile
+                            >
+                                <v-row
+                                    class="fill-height"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <v-row>
+                                        <v-col md="2" lg="2" sm="2">
+                                            <v-row align="center" justify="center">
+                                                <img src="@/assets/img/what-we-do/sass.svg" width="70vh">
+                                                <p class="google-font pt-5 pl-4" style="font-size:28px; font-weight: 600; color: grey;">
+                                                   SASS
+                                                </p>
+                                            </v-row>
+                                        </v-col>
+                                    </v-row>
+                                </v-row>
+                            </v-sheet>
+                        </v-carousel-item>
+                        <v-carousel-item
+                        >
+                            <v-sheet
+                                color="rgb(251,233,231)"
+                                height="100%"
+                                tile
+                            >
+                                <v-row
+                                    class="fill-height"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <v-row>
+                                        <v-col md="2" lg="2" sm="2">
+                                            <v-row align="center" justify="center">
+                                                <img src="@/assets/img/what-we-do/angular.svg" width="45vh">
+                                                <p class="google-font pt-5 pl-4" style="font-size:28px; font-weight: 600; color: grey;">
+                                                   Angular
+                                                </p>
+                                            </v-row>
+                                        </v-col>
+                                    </v-row>
+                                </v-row>
+                            </v-sheet>
+                        </v-carousel-item>
+                        <v-carousel-item
+                        >
+                            <v-sheet
+                                color="rgb(199,239,238)"
+                                height="100%"
+                                tile
+                            >
+                                <v-row
+                                    class="fill-height"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <v-row>
+                                        <v-col md="2" lg="2" sm="2">
+                                            <v-row align="center" justify="center">
+                                                <img class="pl-2" src="@/assets/img/what-we-do/vue.svg" width="60vh">
+                                                <p class="google-font pt-5 pl-4" style="font-size:28px; font-weight: 600; color: grey;">
+                                                   Vue.js
+                                                </p>
+                                            </v-row>
+                                        </v-col>
+                                    </v-row>
+                                </v-row>
+                            </v-sheet>
+                        </v-carousel-item>
+                        <v-carousel-item
+                        >
+                            <v-sheet
+                                color="rgb(224,240,255)"
+                                height="100%"
+                                tile
+                            >
+                                <v-row
+                                    class="fill-height"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <v-row>
+                                        <v-col md="2" lg="2" sm="2">
+                                            <v-row align="center" justify="center">
+                                                <img src="@/assets/img/what-we-do/react.svg" width="55vh">
+                                                <p class="google-font pt-5 pl-4" style="font-size:28px; font-weight: 600; color: grey;">
+                                                   React
+                                                </p>
+                                            </v-row>
+                                        </v-col>
+                                    </v-row>
+                                </v-row>
+                            </v-sheet>
+                        </v-carousel-item>
+                        <v-carousel-item
+                        >
+                            <v-sheet
+                                color="#fff0ff"
+                                height="100%"
+                                tile
+                            >
+                                <v-row
+                                    class="fill-height"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <v-row>
+                                        <v-col md="2" lg="2" sm="2">
+                                            <v-row align="center" justify="center">
+                                                <img src="@/assets/img/what-we-do/pwa.svg" width="100vh">
+                                            </v-row>
+                                        </v-col>
+                                    </v-row>
+                                </v-row>
+                            </v-sheet>
+                        </v-carousel-item>
+                    </v-carousel>
+                </v-row>
+            </v-row>
+
             <v-row align="center" class="py-0 my-0 pt-7">
                 <v-col cols="12" md="12" lg="12" class="pa-0">
                     <div class="ma-1">
@@ -263,7 +429,7 @@
             </v-row>
         </v-container>
         <v-container class="my-0 py-0 pb-md-15" fluid>
-            <v-row class="my-0 py-0" align="start" justify="start">
+            <v-row v-if=!isLoading class="my-0 py-0" align="start" justify="start">
                 <v-col
                     v-for="(sj,i) in SJ"
                     :key="i"
@@ -318,6 +484,26 @@
                     </v-card>
                 </v-col>
             </v-row>
+            <v-row v-if=isLoading class="my-0 py-0" align="start" justify="start">
+                <v-col
+                    v-for="number in 4"
+                    :key="number"
+                    class="py-0 my-0" 
+                    sm="6"
+                    md="3"
+                    xl="3"
+                    col="12">
+                    <v-sheet
+                        class="pa-3"
+                    >
+                        <v-skeleton-loader
+                        class="mx-auto"
+                        max-width="300"
+                        type="card"
+                        ></v-skeleton-loader>
+                    </v-sheet>
+                </v-col>
+            </v-row>
         </v-container>  
     </v-container>
 </template>
@@ -360,6 +546,7 @@ export default {
     name: 'AboutBackendDev',
     data: () => ({
       model: null,
+      isLoading: true,
       SJ: [],
     }),
     mounted(){
@@ -372,6 +559,7 @@ export default {
                 snapshot.docs.map(d => {
                     const data = {id: d.id,  ...d.data()} ;
                     this.SJ.push(data);
+                    this.isLoading = false;
                 })
             });
         },

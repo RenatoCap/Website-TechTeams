@@ -21,10 +21,10 @@
                 <div class="container" style="margin-left: 20px">
                     <p class="content-title">Study Jam Extended</p>
                     <p class="google-font content-subtitle">
-                        Los Study Jam Extended estan diseñados para todos aquellos estudiantes que recien se inician en el mundo de las tecnologías de desarrollo. Durante estos Study Jams se enseñaran los conocimientos básicos y fundamentales para que posteriormente puedas formar parte de un Study Jam de alguno de nuestros Tech Teams.
+                        Los Study Jam Extended están diseñados para todos aquellos estudiantes que recién se inician en el mundo de las tecnologías de desarrollo. Durante estos Study Jams se enseñarán los conocimientos básicos y fundamentales para que posteriormente puedas formar parte de un Study Jam de alguno de nuestros Tech Teams. 
                     </p>
                     <v-container class="my-0 py-0 pb-md-15" fluid>
-                        <v-row class="my-0 py-0" align="start" justify="start">
+                        <v-row v-if=!isLoading class="my-0 py-0" align="start" justify="start">
                             <v-col
                                 v-for="(sj,i) in SJ"
                                 :key="i"
@@ -33,7 +33,7 @@
                                 md="3"
                                 xl="3"
                                 col="12"
-                            >
+                            >   
                                 <v-card 
                                     class="mt-10" 
                                     style="border-radius: 1px solid rgb(224,224,224); border-radius: 10px;" 
@@ -77,6 +77,26 @@
                                         </v-container>
                                     </div>
                                 </v-card>
+                            </v-col>                        
+                        </v-row>
+                        <v-row v-if=isLoading class="my-0 py-0" align="start" justify="start">
+                            <v-col
+                                v-for="number in 4"
+                                :key="number"
+                                class="py-0 my-0" 
+                                sm="6"
+                                md="3"
+                                xl="3"
+                                col="12">
+                                <v-sheet
+                                    class="pa-3"
+                                >
+                                    <v-skeleton-loader
+                                    class="mx-auto"
+                                    max-width="300"
+                                    type="card"
+                                    ></v-skeleton-loader>
+                                </v-sheet>
                             </v-col>
                         </v-row>
                     </v-container>  
@@ -99,6 +119,7 @@ export default {
         return {
             e1: 1,
             SJ: [],
+            isLoading: true
         }
     },
     mounted(){
@@ -109,6 +130,7 @@ export default {
             snapshot.docs.map(d => {
                 const data = {id: d.id,  ...d.data()} ;
                 this.SJ.push(data);
+                this.isLoading = false;
             })
         });
     },

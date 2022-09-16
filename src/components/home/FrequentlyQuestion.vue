@@ -15,10 +15,17 @@
                                 </v-expansion-panel-content>
                             </v-expansion-panel>
                             <v-expansion-panel class="expansion-panel">
-                                <v-expansion-panel-header class="google-font mb-0 panel-header">¿Cómo ser parte de un TechTeam?</v-expansion-panel-header>
+                                <v-expansion-panel-header class="google-font mb-0 panel-header">¿Cómo ser parte de un Study Jam?</v-expansion-panel-header>
                                 <v-expansion-panel-content class="google-font mb-0 panel-conent" color="#f5f5f5">
                                     <br>
-                                     Sencillo, haz click en el boton de "leer más" de cada Tech Team, ahí encontraras un formulario el cual debes de llenar, una vez validemos tus datos recibirás un correo en el que oficialemente se te hace parte del Tech Team que elegiste.
+                                     Sencillo, haz click en el boton de "leer más" de cada Tech Team, ahí encontraras los study jams que se están realizando actualmente y los que hemos realizado anteriormente. 
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                            <v-expansion-panel class="expansion-panel">
+                                <v-expansion-panel-header class="google-font mb-0 panel-header">¿Puedo unirme si soy de otra universidad?</v-expansion-panel-header>
+                                <v-expansion-panel-content class="google-font mb-0 panel-conent" color="#f5f5f5">
+                                    <br>
+                                    Claro, invitamos a todos los interesados en las tecnologías de desarrollo y con ganas de aprender sobre estas tecnologías a formar parte de nuestros Study Jams y Tech Teams.
                                 </v-expansion-panel-content>
                             </v-expansion-panel>
                             <v-expansion-panel class="expansion-panel">
@@ -32,7 +39,7 @@
                                 <v-expansion-panel-header class="google-font mb-0 panel-header">¿Hay certificados por participar?</v-expansion-panel-header>
                                 <v-expansion-panel-content class="google-font mb-0 panel-conent" color="#f5f5f5">
                                     <br>
-                                    Habrán eventos del GDSC UNI que si tendrán entrega de certificados por parte de Google Developers, además de que podrás recibir medallas por ser parte de algunos de ellos.
+                                    Al culminar un study Jams y pasar satisfactoriamente el examen se le hará entrega de un certificado.
                                 </v-expansion-panel-content>
                             </v-expansion-panel>
                             <v-expansion-panel class="expansion-panel">

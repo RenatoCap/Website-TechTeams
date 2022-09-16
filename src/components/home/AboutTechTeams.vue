@@ -3,15 +3,15 @@
     <v-row class="google-font" align="center" justify="center">
       <v-col>
         <h1 justify="center" align="center">
-          ¡No estas solo en esto! </h1>
+          ¡No estás solo en esto! </h1>
         <p class="google-font mt-0 pt-10" style="font-size:120%" align="center" justify="centers">
-          Sabemos que iniciarse en el mundo de la tecnología puede ser difícil si no se cuenta con un guía, por eso los Tech Teams están para ti. A través de nuestros Study Jams podrás aprender temas especificos y profundizarlos a través de la realización de proyectos.
+          Sabemos que iniciarse en el mundo de la tecnología puede ser difícil si no se cuenta con un guía, por eso los Tech Teams están para ti. A través de nuestros Study Jams podrás aprender temas específicos y profundizarlos a través de la realización de proyectos. 
         </p>
       </v-col>
       <!-- Techteams -->
       <v-col class="px-0 mx-0" cols="12" md="9" sm="12">
         <v-container fluid>
-          <v-row align="center" justify="center">
+          <v-row v-if=!isLoading align="center" justify="center">
             <v-col
               v-for="(tt, i) in techTeamData"
               :key="i"
@@ -37,6 +37,42 @@
               </div>
             </v-col>
           </v-row>
+          <v-row v-if=isLoading align="center" justify="center">
+            <v-col
+              v-for="a in 4"
+              :key="a"
+              sm="5"
+              md="5"
+              cols="12"
+            >
+              <v-sheet
+                class="pa-3"
+              >
+                <v-skeleton-loader
+                  class="mx-auto pb-2"
+                  align="center"
+                  justify="center"
+                  max-width="300"
+                  type="heading"
+                ></v-skeleton-loader>
+                <v-skeleton-loader
+                class="mx-auto"
+                max-width="300"
+                type="text"
+                ></v-skeleton-loader>
+                <v-skeleton-loader
+                class="mx-auto"
+                max-width="300"
+                type="text"
+                ></v-skeleton-loader>
+                <v-skeleton-loader
+                class="mx-auto"
+                max-width="300"
+                type="text"
+                ></v-skeleton-loader>
+              </v-sheet>
+            </v-col>
+          </v-row>
         </v-container>
       </v-col>
     </v-row>
@@ -54,6 +90,7 @@ export default {
   data() {
     return {
       techTeamData: [],
+      isLoading: true
     };
   },
   mounted(){
@@ -64,9 +101,9 @@ export default {
       snapshot.docs.map(d => {
           const data = d.data();
           this.techTeamData.push(data);
+          this.isLoading = false;
       })
     });
-    console.log(this.techTeamData);
   },
   methods: {
     onClick(e, item) {

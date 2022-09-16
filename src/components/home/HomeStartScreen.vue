@@ -26,6 +26,7 @@
             rounded
             color="#FFE082"
             height="54px"
+            @click="onClick($event,'/backend')"
           >
             <span class="google-font text-none" style="font-size: 25px; color: black;">#Backend</span>
         </v-btn>
@@ -35,6 +36,7 @@
             rounded
             color="#FFCDD2"
             height="54px"
+            @click="onClick($event,'/clouddev')"
         >
           <span class="google-font text-none" style="font-size: 25px; color: black;">#CloudDev</span>
         </v-btn>
@@ -44,6 +46,7 @@
             rounded
             color="#BBDEFB"
             height="54px"
+            @click="onClick($event,'/ds&ml')"
         >
           <span class="google-font text-none" style="font-size: 25px; color: black;">#MachineLearning</span>
         </v-btn>
@@ -53,6 +56,7 @@
             rounded
             color="#E1BEE7"
             height="54px"
+            @click="onClick($event,'/designdev')"
         >
           <span class="google-font text-none" style="font-size: 25px; color: black;">#DesignDev</span>
         </v-btn>
@@ -80,12 +84,19 @@
 </template>
 
 <script>
+import router from "../../router";
 import { mapState } from "vuex";
 
 export default {
   data: () => ({}),
   computed: {
     ...mapState(["config"])
+  },
+  methods: {
+    onClick(e, item) {
+      e.stopPropagation();
+      router.push(item);
+    },
   }
 };
 </script>
