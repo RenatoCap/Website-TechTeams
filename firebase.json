@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site":"firebase-gdsc-uni",
+    "site":"techteams-gdsc-uni",
     "public": "dist",
     "rewrites": [ {
         "source": "**",

@@ -14,7 +14,6 @@
     "@tensorflow/tfjs-backend-webgl": "^3.19.0",
     "@tensorflow/tfjs-converter": "^3.19.0",
     "@tensorflow/tfjs-core": "^3.19.0",
-    "caniuse-lite": "^1.0.30001280",
     "core-js": "^3.6.5",
     "firebase": "^9.9.3",
     "register-service-worker": "^1.6.2",
