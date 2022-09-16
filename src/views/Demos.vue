@@ -8,7 +8,7 @@
                     </v-row>
         </v-container>
         <v-container fluid class="pa-0 pt-0 my-0">
-            <v-row justify="center" align="center" style="background:#fff" class="py-0 my-0 pt-15">
+            <v-row justify="center" align="center" style="background:#fff" class="py-0 my-0 pt-2">
                 <v-col md="12" lg="10" sm="11" xs="12" class="py-0" >
                 <AboutTechTeamsDemos />
                 </v-col>
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import AboutTechTeamsDemos from '../components/home/AboutTechTeamsDemos.vue';
+import AboutTechTeamsDemos from '../components/Demos/AboutTechTeamsDemos.vue';
 export default {
     name: 'Demos',
     components: {
         DemoHeader: () => import("@/components/Demos/DemoHeader"),
-        AboutTechTeamsDemos: () => import("@/components/home/AboutTechTeamsDemos"),
+        AboutTechTeamsDemos: () => import("@/components/Demos/AboutTechTeamsDemos"),
         DemoContent: () => import("@/components/Demos/DemoContent")
     },
 };

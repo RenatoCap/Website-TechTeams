@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="py-0" style="padding-left: 4%; padding-right: 4%">
+  <v-container fluid class="py-0" style="padding-left: 4%; padding-right: 0%">
     <v-row class="google-font" align="center" justify="center">
       <v-col class="px-0 mx-0" cols="12" md="9" sm="12">
         <v-container fluid>
@@ -15,6 +15,7 @@
                 <div class="text-center pt-2">
                   <v-btn 
                     text
+                    class="letter"
                     @click="onClick($event, tt.url)"
                   >
                   {{tt.demo}}
@@ -64,96 +65,15 @@ export default {
 </script>
 
 <style>
-mark {
-  position: relative;
-  z-index: 0;
-  padding: 0 0 10px;
-  background-color: #fefefe;
-
-}
-mark:after{
-  content: "";
-  position: absolute;
-  width: 170px;
-  height: 22px;
-  top: 85%;
-  bottom: 0;
-  left: 0%;
-  z-index: 1;
-  transform: translate(-45px);
-  background-color: #F44336;
-  mask-image: url('../../assets/img/svg/marker.svg');
-}
-
 .card {
   border-radius: 40px;
   padding: 2%;
   min-height: 100px;
 }
-.td-title {
-  font-size: 45px;
-  font-weight: 600;
-  color: #221f1f;
-}
-.td-subtitle {
-  font-size: 20px;
-  text-align: justify;
-  color: rgb(0, 0, 0, 0.87);
-}
-.td-title-card {
-  font-size: 30px;
-  text-align: center;
-  font-weight: 600;
-}
-.td-subtitle-card {
-  font-size: 18px;
-  text-align: center;
-}
 
-
-@media screen and (min-width: 11800px) {
-  .td-title {
-    font-size: 55px;
-    font-weight: 600;
-    color: #212121;
-  }
-  .td-subtitle {
-    font-size: 23px;
-    color: rgb(0, 0, 0, 0.87);
-  }
-  .td-title-card {
-    font-size: 40px;
-    text-align: center;
-    font-weight: 600;
-  }
-}
-
-.heading{
-    font-size:30px;
-    font-weight: 600;
-}
-.td-subtitle{
-    font-size: 20px;
-}
 @media screen and (min-width: 600px){
-  .heading{
-      font-size:55px;
-      font-weight: 600;
-  }
-  .subheading{
-      font-size: 23px;
-      font-weight: 500;
-  }
-  .subheading2{
-      font-size: 20px;
-  }
-  .td-subtitle{
-      font-size: 23px;
-      font-weight: 500;
-  }
-  .td-description{
-      font-size: 19px;
-      opacity: 0.9;
+  .card {
+    min-width: 230px;
   }
 }
 </style>

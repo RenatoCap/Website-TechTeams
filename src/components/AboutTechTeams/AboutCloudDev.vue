@@ -28,7 +28,7 @@
                 </v-col>
             </v-row>
             <v-row align="center" class="py-0 my-0 pt-7">
-                <v-container fluid style="border-radius: 18px; background-color: #80CBC4;">
+                <v-container fluid style="border-radius: 18px; background-color: #E1BEE7;">
                     <v-row class="my-0 pa-5 px-6" align="center" justify="center">
                         <v-col>
                             <p class="google-font mb-0" align="center" justify="center" style="font-size:30px">
@@ -47,7 +47,7 @@
                                 class="pa-4"
                                 center-active
                                 show-arrows
-                                style="background-color: #80CBC4;"
+                                style="background-color: #E1BEE7;"
                             >  
                                 <v-slide-item v-slot="{ toggle }">
                                     <v-card
@@ -109,10 +109,10 @@
                                         @click="toggle"
                                         style="background-color: rgb(255,232,205);border-color:rgb(255,232,205);"
                                     >
-                                        <v-row class="pa-3 pt-2" align="end">
+                                        <v-row class="pa-3 pt-7" align="end">
                                             <v-col sm="12" md="12" col="12">
                                                 <div class="ml-4">
-                                                    <img src="@/assets/img/what-we-do/aws.svg" width="100vh">
+                                                    <img src="@/assets/img/what-we-do/aws.svg" width="85vh">
                                                 </div>
                                                 <p class="google-font px-2 ma-0 pt-2" style="font-size:22px; font-weight: 600;">
                                                     AWS

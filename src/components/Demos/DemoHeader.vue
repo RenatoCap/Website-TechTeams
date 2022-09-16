@@ -45,11 +45,11 @@
                 <span class="google-font text-none" style="font-size: 25px; color: black;">#DesignDev</span>
                 </v-btn>
             </v-col>
-            <v-col md="4" sm="12" cols="12" class="py-0 my-0 mt-10">
+            <v-col md="4" sm="12" cols="12" class="py-0 my-0 mt-10 imgcloud">
                 <v-img
                     :src="require('@/assets/img/dontremove/about.jpg')"
                     :lazy-src="require('@/assets/img/dontremove/about.jpg')"
-                    class=" mb-3"
+                    class=" mb-3 imgcloud"
                     width="100%"
                 >
                     <template v-slot:placeholder>
@@ -76,13 +76,34 @@
     font-size: 20px;
 }
 @media screen and (min-width: 600px){
-.heading{
-    font-size:70px;
-    font-weight: 600;
+    .heading{
+        font-size: 90px;
+        font-weight: 600;
+        line-height: 100px;
+    }
+    .td-subtitle{
+        font-size: 20px;
+    }
 }
-.td-subtitle{
-    font-size: 23px;
-    font-weight: 500;
+.imgcloud {
+    width: 450px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 30px;
 }
-}
+@media (max-width: 767.98px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imgcloud {
+      width: 300px;
+      height: 200px;
+      justify-content: center;
+    }
+  }
 </style>
