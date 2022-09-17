@@ -138,7 +138,7 @@ const routes = [{
     component: () => import(/* webpackChunkName: "SJContent" */  '@/views/SJContent.vue'),
   },
   {
-    path:'/study-jam/DesignDev/:id',
+    path:'/study-jam/Cloud/:id',
     component: () => import(/* webpackChunkName: "SJContent" */  '@/views/SJContent.vue'),
   },
   {

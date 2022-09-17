@@ -33,13 +33,14 @@
                                             dark
                                             height="2.5em"
                                             class="google-font"
-                                            style="background-color: rgb(255, 0, 0); border-color: rgb(255, 0, 0); text-transform: capitalize; font-size: 105%;"
-                                            v-if="!sj.Extended"
+                                            style="background-color: #2196F3; border-color: #2196F3; text-transform: capitalize; font-size: 105%;"
+                                            v-if="sj.open"
+                                            :href="sj.Inscription"
                                         >
                                             <v-icon class="pr-2">
-                                                mdi-youtube
+                                                mdi-list-box
                                             </v-icon>
-                                            Grabaciones
+                                            Inscripción
                                         </v-btn>
                                     </div>
                                 </v-container>
@@ -115,6 +116,17 @@
                                                                                     <v-btn
                                                                                         icon
                                                                                         class="ml-0 mt-0 mx-0"
+                                                                                        v-if="sj.SocialNetwork.facebook"
+                                                                                        :href=sj.SocialNetwork.facebook
+                                                                                    >
+                                                                                        <v-icon style="color:#4267B2; caret-color: #4267B2;">
+                                                                                            mdi-facebook
+                                                                                        </v-icon>
+                                                                                    </v-btn>
+                                                                                    <v-btn
+                                                                                        icon
+                                                                                        class="ml-0 mt-0 mx-0"
+                                                                                        v-if="sj.SocialNetwork.linkedin"
                                                                                         :href=sj.SocialNetwork.linkedin
                                                                                     >
                                                                                         <v-icon style="color: rgb(0, 119, 181); caret-color: rgb(0, 119, 181);">
@@ -124,12 +136,14 @@
                                                                                     <v-btn
                                                                                         icon
                                                                                         class="ml-0 mt-0 mx-0"
+                                                                                        v-if="sj.SocialNetwork.github"
                                                                                         :href=sj.SocialNetwork.github
                                                                                     >
                                                                                         <v-icon style="color:#000; caret-color: #000;">
                                                                                             mdi-github
                                                                                         </v-icon>
                                                                                     </v-btn>
+                                                                                    
                                                                                 </v-col>
                                                                             </v-row>
                                                                         </v-container>

@@ -11,7 +11,7 @@
                         </b> 
                     </p>
                     <p class="google-font mb-0 mt-5" style="font-size:20px">
-                        Este Tech Team aborda todos los campos de la inteligencia artificial, incluyendo todos los procesos de elaboración de un modelo de IA, desde el data staging hasta la puesta en producción de tu modelo. Nuestro enfoque se centra principalmente en aplicar la inteligencia artificial en dispositivos móviles, páginas web o implementarlos en Google Cloud Platform para que envíen los resultados a diversos dispositivos. Por otro lado también tocamos temas de Data Science como Data Visualization, Storytelling, Web Scrapping y Data Driven  
+                        Este Tech Team aborda todos los campos de la inteligencia artificial, incluyendo todos los procesos de elaboración de un modelo de IA, desde el data staging hasta la puesta en producción de tu modelo. Nuestro enfoque se centra principalmente en aplicar la inteligencia artificial en dispositivos móviles, páginas web o implementarlos en Google Cloud Platform para que envíen los resultados a diversos dispositivos.
                         <br>
                     </p>
                 </v-col>
@@ -494,7 +494,7 @@ export default {
             const firebaseApp = initializeApp(config.firebase);
             const firestore = getFirestore(firebaseApp);
             const userCol = collection(firestore, 'StudyJams/');
-            const userDoc = doc(userCol, 'Cloud/');
+            const userDoc = doc(userCol, 'MachineLearning/');
             const newUserCol = collection(userDoc, '202201/')
             onSnapshot(newUserCol, snapshot => {
                 snapshot.docs.map(d => {
