@@ -6,7 +6,7 @@
                     <v-container fluid style="border-bottom: 1px solid rgb(224, 224, 224); background: rgb(249, 250, 251) none repeat scroll 0% 0%;">
                         <v-row  class="mt-0 pt-15 pb-15" align="center" justify="center">
                             <v-col class="order-2 order-md-1 mb-3 pr-md-10" cols="12" md="7" lg="6" xl="6">
-                                <v-container>
+                                <v-container style="padding-left: 10%; padding-right: 10%">
                                     <p class="google-font event-title"> {{ sj.Title }}</p>
                                     <div class="google-font content-summary">
                                         <p>
@@ -59,7 +59,7 @@
                             </v-col>
 
                             <v-col cols="12" md="5" lg="5" xl="3" class="float-md-right order-1 order-md-2">
-                                <v-img class="mt-0 mt-md-0" style="border: 1px solid rgb(224, 224, 224); border-radius: 8px; min-height: 300px;" :src=sj.img  width="120vh" height="50vh">
+                                <v-img class="mt-0 mt-md-0" style="border: 1px solid rgb(224, 224, 224); border-radius: 8px; min-height: 300px;" :src=sj.img  width="120vh" height="80vh">
                                 </v-img>
                             </v-col>
                         </v-row>

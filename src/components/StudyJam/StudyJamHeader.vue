@@ -17,11 +17,11 @@
             </v-col>
         </v-row>
         <v-row align="center" class="py-0 my-0 mt-10">
-            <v-col class="py-0 my-0 mt-10">
+            <v-col class="py-0 my-0 mt-3">
                 <div class="container" style="margin-left: 20px">
                     <p class="content-title">Study Jam Extended</p>
                     <p class="google-font content-subtitle">
-                        Los Study Jam Extended están diseñados para todos aquellos estudiantes que recién se inician en el mundo de las tecnologías de desarrollo. Durante estos Study Jams se enseñarán los conocimientos básicos y fundamentales para que posteriormente puedas formar parte de un Study Jam de alguno de nuestros Tech Teams. 
+                        Los Study Jam Extended están diseñados para todos aquellos estudiantes que recién se inician en el mundo de las tecnologías de desarrollo. Durante estos Study Jams se enseñarán los conocimientos básicos y fundamentales para que posteriormente puedas formar parte de un Study Jam de alguno de nuestros Tech Teams.
                     </p>
                     <v-container class="my-0 py-0 pb-md-15" fluid>
                         <v-row v-if=!isLoading class="my-0 py-0" align="start" justify="start">
@@ -29,8 +29,8 @@
                                 v-for="(sj,i) in SJ"
                                 :key="i"
                                 class="py-0 my-0" 
-                                sm="6"
-                                md="3"
+                                sm="8"
+                                md="4"
                                 xl="3"
                                 col="12"
                             >   

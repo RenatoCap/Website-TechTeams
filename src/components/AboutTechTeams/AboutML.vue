@@ -375,8 +375,8 @@
                     v-for="(sj,i) in SJ"
                     :key="i"
                     class="py-0 my-0" 
-                    sm="6"
-                    md="3"
+                    sm="8"
+                    md="4"
                     xl="3"
                     col="12"
                 >
