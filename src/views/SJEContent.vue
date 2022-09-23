@@ -204,6 +204,10 @@
 .content-summary {
     font-size: 1.1em;
 }
+.img-studyjam{
+    width: 120vh;
+    height: 80vh;
+}
 
 @media (max-width: 767.98px) {
     .event-title{
@@ -219,6 +223,10 @@
     }
     .content-summary {
         font-size: 0.9em;
+    }
+    .img-studyjam{
+        width: 120vh;
+        height: 60vh;
     }
 }
 

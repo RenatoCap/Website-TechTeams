@@ -8,11 +8,11 @@
                         Study Jam es un programa de aprendizaje colectivo que combina la experiencia práctica de los desarrolladores con la experiencia de Google Cloud. Todos los estudiantes con ideas afines se unen para perfeccionar sus habilidades y ampliar sus conocimientos sobre alguna de las tecnologías de desarrollo a través de aulas interactivas y laboratorios prácticos.
                         <br>
                         <br>
-                        Con Los Study Jams, los miembros de nuestra comunidad aprenderán las herramientas y capacidades fundamentales de las tecnologías que abarcan cada uno de los Tech Teams, además de compartir experiencias y resolver problemas prácticos de manera conjunta. Todo esto lo realizán guiados por un lead.
+                        Con los Study Jams, los miembros de nuestra comunidad aprenderán las herramientas y capacidades fundamentales de las tecnologías que abarcan cada uno de los Tech Teams, además de compartir experiencias y resolver problemas prácticos de manera conjunta. Todo esto lo realizán guiados por un lead.
                     </p>
                 </div>
             </v-col>
-            <v-col md="4" sm="12" cols="12" class="py-0 my-0 mt-10">
+            <v-col md="4" sm="12" cols="12" class="py-0 my-0 mt-10 pl-12">
                 <v-img class="study-jam-picture" src="@/assets/img/SJ/iconJam.svg" />
             </v-col>
         </v-row>
@@ -156,7 +156,7 @@ export default {
     width:50vh;
 }
 .study-jam-picture {
-    width: 45vh;
+    width: 55vh;
 }
 @media (max-width: 767.98px) {
     .content-title {

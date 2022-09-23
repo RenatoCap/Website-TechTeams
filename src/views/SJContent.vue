@@ -59,7 +59,7 @@
                             </v-col>
 
                             <v-col cols="12" md="5" lg="5" xl="3" class="float-md-right order-1 order-md-2">
-                                <v-img class="mt-0 mt-md-0" style="border: 1px solid rgb(224, 224, 224); border-radius: 8px; min-height: 300px;" :src=sj.img  width="120vh" height="80vh">
+                                <v-img class="mt-0 mt-md-0 img-studyjam" style="border: 1px solid rgb(224, 224, 224); border-radius: 8px; min-height: 300px;" :src=sj.img>
                                 </v-img>
                             </v-col>
                         </v-row>
@@ -215,6 +215,10 @@
 .content-summary {
     font-size: 1.1em;
 }
+.img-studyjam{
+    width: 120vh;
+    height: 80vh;
+}
 
 @media (max-width: 767.98px) {
     .event-title{
@@ -230,6 +234,10 @@
     }
     .content-summary {
         font-size: 0.9em;
+    }
+    .img-studyjam{
+        width: 120vh;
+        height: 60vh;
     }
 }
 

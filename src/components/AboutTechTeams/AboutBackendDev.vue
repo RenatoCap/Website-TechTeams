@@ -304,7 +304,7 @@
                         <div class="pa-5">
                             <p class="google-font mb-0 td-title">Nuestros Study Jams</p>
                             <p class="google-font mt-0 pt-3 td-subtitle">
-                            Nuestra comunidad tiene como objetivo proporcionar Study Jams que cubran los distintos tópicos en los Tech Teamss
+                            Nuestra comunidad tiene como objetivo proporcionar Study Jams que cubran los distintos tópicos en los Tech Teams.
                             </p>
                         </div>
                     </div>
